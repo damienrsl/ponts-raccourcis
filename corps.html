@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ponts Raccourcis : Claude depuis la poche</title>
+<style>
+/*KIT*/
+main{max-width:640px;margin:0 auto;position:relative;z-index:1;padding:0 16px 60px}
+.hero{padding:60px 4px 26px;position:relative}
+.hero .orbe{--d:70px;position:absolute;right:6px;top:44px}
+.hero h1{font-size:33px;line-height:1.08;letter-spacing:-.03em;max-width:14ch}
+.hero p{margin:16px 0 0;font-size:16px;line-height:1.5;max-width:38ch;color:var(--texte-2)}
+.hero p b,.carte p b,.franc b,.spec p b,.spec li b,.pont p b{color:var(--texte)}
+section{margin:34px 0}
+section>.etiquette{display:block;margin:0 4px 10px}
+.carte{padding:20px;margin-bottom:12px}
+.carte h2{font-size:23px;letter-spacing:-.02em;line-height:1.15}
+.carte>p{margin:10px 0 0;line-height:1.55;color:var(--texte-2)}
+.franc{border-left:2px solid var(--pan-2);padding:14px 16px;margin:14px 0 0;color:var(--texte-2);font-size:15px;line-height:1.5;border-radius:0 var(--r-m) var(--r-m) 0;background:rgba(40,95,255,.05)}
+.spec{padding:14px 0;border-top:1px solid var(--filet)}
+.spec:first-of-type{border-top:0;padding-top:4px}
+.num{font:600 12px var(--police-mono);color:var(--pan-3);letter-spacing:.06em}
+.spec h3{font-size:18px;margin-top:4px;letter-spacing:-.01em}
+.spec p{margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--texte-2)}
+.spec ul{margin:8px 0 0;padding-left:18px;color:var(--texte-2);font-size:15px;line-height:1.55}
+table{width:100%;border-collapse:collapse;margin:12px 0 0;font-size:15px}
+th,td{text-align:left;padding:9px 6px;border-top:1px solid var(--filet);vertical-align:top;line-height:1.4}
+th{font:600 11px var(--police-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--texte-3);border-top:0}
+td b{color:var(--pan-3)}
+.pont{padding:14px 0;border-top:1px solid var(--filet)}
+.pont:first-of-type{border-top:0;padding-top:4px}
+.pont h3{font-size:18px;letter-spacing:-.01em;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.pont h3 .vague{font:600 11px var(--police-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--pan-3);background:rgba(40,95,255,.08);padding:3px 8px;border-radius:999px}
+.pont p{margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--texte-2)}
+.pont .fleche{color:var(--texte-3)}
+.bouton{display:inline-block;margin:10px 8px 0 0;padding:11px 18px;border-radius:999px;background:var(--bleu-chat);color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.bouton.doux{background:rgba(40,95,255,.1);color:var(--pan-3)}
+.lien{word-break:break-all;font-family:var(--police-mono);font-size:13px;color:var(--pan-3)}
+.etapes{counter-reset:e;margin:12px 0 0;padding:0;list-style:none}
+.etapes li{counter-increment:e;position:relative;padding:10px 0 10px 40px;border-top:1px solid var(--filet);font-size:15px;line-height:1.5;color:var(--texte-2)}
+.etapes li:first-child{border-top:0}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:rgba(40,95,255,.1);color:var(--pan-3);font:600 13px var(--police-mono);display:grid;place-items:center}
+.jeu .q{padding:14px 16px;border-radius:var(--r-m);background:rgba(255,255,255,.7);border:1px solid var(--filet);margin-top:10px;cursor:pointer}
+.jeu .q p{margin:0;font-size:15px;line-height:1.5;color:var(--texte)}
+.jeu .q .r{display:none;margin-top:8px;color:var(--texte-2)}
+.jeu .q.ouvert .r{display:block}
+.jeu .q .r b{color:var(--pan-3)}
+.schema{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:6px;align-items:center;margin:14px 0 0;font-size:14px;text-align:center}
+.schema div{padding:12px 8px;border-radius:var(--r-m);background:rgba(40,95,255,.07);color:var(--texte);line-height:1.35}
+.schema span{color:var(--texte-3);font-size:18px}
+@media (max-width:420px){.schema{grid-template-columns:1fr;gap:4px}.schema span{transform:rotate(90deg);display:block}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <span class="etiquette">Ponts Raccourcis · 22 novembre 2026</span>
+  <div class="orbe"></div>
+  <h1>Claude depuis la poche, sans prendre le bateau</h1>
+  <p>Tokn a déjà une porte d'actions. Il lui manquait les <b>rampes</b> : le Bouton Action, Siri, la feuille de partage, les automatisations. Cette page est la carte complète, avec <b>7 ponts prêts à installer</b> et le plan des deux vagues suivantes.</p>
+</header>
+
+<section>
+  <span class="etiquette">Le contre-argument, d'abord</span>
+  <div class="verre carte">
+    <h2>Chaque pont est une entrée de plus</h2>
+    <p>Le contradicteur du 2 novembre l'avait dit : pas de cinquième outil. Un catalogue de trente raccourcis, c'est trente endroits où oublier un geste.</p>
+    <div class="franc"><b>Ma réponse.</b> Un pont n'est pas un outil : tout arrive dans le même Tokn, dans le même fil. Mais la règle tient : <b>trois ponts installés d'abord</b> (Tokn, Lien, Photo). Les autres n'entrent que quand l'un des trois a servi cinq jours de suite.</div>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Ce qui existe déjà</span>
+  <div class="verre carte">
+    <h2>La porte est ouverte depuis le 21 novembre</h2>
+    <p>Les widgets Scriptable parlent à une seule adresse du cerveau. L'app Raccourcis sait parler à la même adresse. Donc un pont = <b>deux actions natives</b> et zéro ligne de code serveur.</p>
+    <div class="schema">
+      <div>Un geste<br>(bouton, voix, partage)</div><span>→</span>
+      <div>Le raccourci<br>(2 à 5 actions Apple)</div><span>→</span>
+      <div>Tokn sur le cerveau<br>→ un sujet Claude</div>
+    </div>
+    <table>
+      <tr><th>Geste connu du serveur</th><th>Ce qu'il fait</th></tr>
+      <tr><td><b>prompt</b></td><td>Un sujet dans l'espace choisi, avec le texte dicté</td></tr>
+      <tr><td><b>selection</b></td><td>Une grosse sélection de produits dans l'espace Marque</td></tr>
+      <tr><td><b>vocal</b></td><td>Un vocal long que Claude range (idées, tâches, décisions)</td></tr>
+      <tr><td><b>dismoi</b></td><td>Une question, la réponse revient à plat dans le widget</td></tr>
+      <tr><td><b>photo</b></td><td>Une image jointe au sujet, quelques mots</td></tr>
+      <tr><td><b>minuteur</b></td><td>N minutes sur une tâche, notification à la fin</td></tr>
+      <tr><td><b>continuer · favori · post</b></td><td>Suite d'un sujet, prompt favori, post depuis le Radar</td></tr>
+      <tr><td><b>fini · bloque · stop · point</b></td><td>Tâche du jour, mission en cours</td></tr>
+    </table>
+    <p>La réponse de Claude ne revient pas dans le raccourci : elle arrive comme aujourd'hui, en notification et dans Tokn. Le raccourci confirme seulement que c'est parti.</p>
+  </div>
+</section>
+
+<section id="installer">
+  <span class="etiquette">Vague 1 · à installer maintenant</span>
+  <div class="verre carte">
+    <h2>Sept ponts signés, un tap chacun</h2>
+    <p>Fichiers sur le cerveau, donc <b>Tailscale allumé</b> sur l'iPhone. Safari télécharge, tu ouvres dans Raccourcis, tu confirmes « Ajouter ». Le nom du raccourci est celui du fichier.</p>
+    <div class="franc"><b>Pas vérifié sur ton iPhone.</b> Les fichiers passent la signature Apple sur le Mac, mais seul l'iPhone dit si l'import est propre. Si l'un refuse, dis-moi lequel.</div>
+
+    <div class="pont">
+      <h3>Tokn <span class="vague">le pont principal</span></h3>
+      <p>Tu parles, ça part. Dictée en français, arrêt à la pause, sujet dans Perso, notification « Ordre lancé ». À brancher sur le <b>Bouton Action</b> et sur « Dis Siri, Tokn ».</p>
+      <a class="bouton" href="http://100.125.157.100:8791/ponts/Tokn.shortcut">Installer Tokn</a>
+    </div>
+    <div class="pont">
+      <h3>Lien à Claude <span class="vague">feuille de partage</span></h3>
+      <p>Depuis TikTok, Instagram, YouTube, Safari, une boutique : Partager → Lien à Claude. Il reçoit le lien et dit ce qu'il en fait (idée, produit, concurrent, à ranger).</p>
+      <a class="bouton" href="http://100.125.157.100:8791/ponts/Lien%20%C3%A0%20Claude.shortcut">Installer Lien à Claude</a>
+    </div>
+    <div class="pont">
+      <h3>Photo à Claude <span class="vague">feuille de partage ou direct</span></h3>
+      <p>Une étiquette en friperie, un écran, un plat, une capture de reel. Partagée depuis Photos, ou choisie si tu le lances à la main. Redimensionnée à 1 400 px, deux mots demandés, image jointe au sujet.</p>
+      <a class="bouton" href="http://100.125.157.100:8791/ponts/Photo%20%C3%A0%20Claude.shortcut">Installer Photo à Claude</a>
+    </div>
+    <div class="pont">
+      <h3>Sélection</h3>
+      <p>« Pulls en laine, moins de 150 euros, pas de logo » et la sélection part dans l'espace Marque avec le skill qui va bien. Même geste que le widget, mais depuis Siri ou le Bouton Action.</p>
+      <a class="bouton doux" href="http://100.125.157.100:8791/ponts/S%C3%A9lection.shortcut">Installer Sélection</a>
+    </div>
+    <div class="pont">
+      <h3>Vocal long</h3>
+      <p>Dictée qui ne s'arrête qu'au tap : tu vides ta tête en marchant, Claude range en idées, tâches et décisions, puis fait le reste.</p>
+      <a class="bouton doux" href="http://100.125.157.100:8791/ponts/Vocal%20long.shortcut">Installer Vocal long</a>
+    </div>
+    <div class="pont">
+      <h3>Dis-moi</h3>
+      <p>Une question courte, la réponse à plat dans le widget et en notification. Le pont des AirPods en attendant la version lue à voix haute (vague 2).</p>
+      <a class="bouton doux" href="http://100.125.157.100:8791/ponts/Dis-moi.shortcut">Installer Dis-moi</a>
+    </div>
+    <div class="pont">
+      <h3>Minuteur 25</h3>
+      <p>« Sur quoi ? » puis 25 minutes lancées côté Tokn : compte à rebours dans le widget, notification à la fin, la tâche notée.</p>
+      <a class="bouton doux" href="http://100.125.157.100:8791/ponts/Minuteur%2025.shortcut">Installer Minuteur 25</a>
+    </div>
+  </div>
+
+  <div class="verre carte">
+    <h2>Brancher les rampes, en cinq minutes</h2>
+    <ol class="etapes">
+      <li><b>Bouton Action</b> : Réglages → Bouton Action → Raccourci → Tokn. Un appui long, tu parles.</li>
+      <li><b>Toucher le dos</b> : Accessibilité → Toucher → Toucher le dos → deux fois = Photo à Claude, trois fois = Vocal long.</li>
+      <li><b>Siri</b> : rien à régler, le nom du raccourci est la phrase. « Dis Siri, Tokn », « Dis Siri, Dis-moi ». Marche dans les AirPods et sur l'Apple Watch si l'iPhone est à côté.</li>
+      <li><b>Centre de contrôle</b> : appui long → Ajouter un contrôle → Raccourci → Tokn. Accessible écran verrouillé.</li>
+      <li><b>Écran verrouillé</b> : le widget « Raccourci » d'Apple à la place d'un widget Scriptable. Sur iOS 27, le widget XL lance plusieurs raccourcis d'un coup.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Les rampes disponibles</span>
+  <div class="verre carte">
+    <h2>Ce que l'iPhone sait déclencher tout seul</h2>
+    <p>Relevé sur la documentation Apple d'iOS 26 et 27 (ton Mac est en 27.2, ton iPhone 17 Pro Max sûrement aussi). Une automatisation « sans confirmation » part toute seule ; les autres affichent une notification à toucher.</p>
+    <table>
+      <tr><th>Sans confirmation</th><th>Avec confirmation</th></tr>
+      <tr><td>Heure du jour · Alarme arrêtée · Sommeil · Arrivée · Départ · CarPlay · E-mail reçu · Message reçu · Transaction Apple Pay · Wi-Fi · Bluetooth</td>
+          <td>App ouverte ou fermée · Chargeur · Niveau de batterie · Focus · NFC · Son · <b>Capture d'écran enregistrée</b> (27) · <b>Notification d'une app</b>, filtrable par mot (27) · Clavier connecté (27) · Entraînement</td></tr>
+    </table>
+    <p>Et les gestes à la main : Bouton Action, Toucher le dos, Siri, Centre de contrôle, écran verrouillé, feuille de partage, Spotlight (aussi sur le Mac, avec le texte sélectionné), Apple Watch, CarPlay, Apple Pencil.</p>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Le catalogue des ponts</span>
+  <div class="verre carte">
+    <h2>Contenu</h2>
+    <div class="pont"><h3>Capture d'écran = message à Claude <span class="vague">vague 1</span></h3>
+      <p>Automatisation iOS 27 « quand une capture est enregistrée » → Photo à Claude dans l'espace Contenu. Tu vois un reel qui marche, tu captures, Claude te dit le hook et l'archétype. Rien d'autre à faire.</p></div>
+    <div class="pont"><h3>Lien partagé depuis TikTok ou Instagram <span class="vague">vague 1</span></h3>
+      <p>Lien à Claude. Concurrent, idée, produit : il trie, il range dans le Radar ou le carnet.</p></div>
+    <div class="pont"><h3>Focus « Tourner » activé <span class="vague">vague 1</span></h3>
+      <p>Automatisation Focus → raccourci qui envoie « je tourne : donne-moi le contexte de la vidéo du jour » et coupe WhatsApp. Focus désactivé → « range les rushs ».</p></div>
+    <div class="pont"><h3>Puce NFC sur le pied caméra <span class="vague">vague 1</span></h3>
+      <p>Un tag à deux euros collé au pied : le poser dessus ouvre la routine éloquence de deux minutes puis le Hook Gym. Le rituel d'avant tournage sans y penser.</p></div>
+    <div class="pont"><h3>Disque LaCie branché sur le Mac <span class="vague">vague 2</span></h3>
+      <p>Automatisation macOS 26 « disque externe connecté » → Raccourcis Mac appelle Tokn : import des rushs, puis proposition de dérush dans l'Encart. Idem « fichiers ajoutés au dossier Rushs ».</p></div>
+    <div class="pont"><h3>« Dis Siri, Tokn, Radar » <span class="vague">vague 2</span></h3>
+      <p>Une route qui renvoie les trois explosions du jour, lues à voix haute ; « j'en fais un post » à la voix.</p></div>
+  </div>
+
+  <div class="verre carte">
+    <h2>Marques et sélections</h2>
+    <div class="pont"><h3>Étiquette en friperie <span class="vague">vague 1</span></h3>
+      <p>Photo à Claude, espace Marque : « c'est quoi cette marque, ça vaut quoi en France ». Au Japon, c'est le pont le plus rentable de la liste.</p></div>
+    <div class="pont"><h3>Lien produit partagé <span class="vague">vague 1</span></h3>
+      <p>Depuis une boutique : fiche Diggeur ou fiche marque, prix relevé, ajout à la sélection en cours.</p></div>
+    <div class="pont"><h3>Sélection à la voix <span class="vague">vague 1</span></h3>
+      <p>Le raccourci Sélection, avec « Préparer la vidéo » qui reste à toi dans l'app.</p></div>
+    <div class="pont"><h3>Transaction Apple Pay en boutique <span class="vague">vague 2</span></h3>
+      <p>Sans confirmation : la carte passe → Claude note la dépense (Tiime) et te propose « je fais la fiche de cette pièce ? ». Jamais d'achat, jamais d'envoi : il note.</p></div>
+    <div class="pont"><h3>« Chercher dans Tokn » depuis Visual Intelligence <span class="vague">vague 3</span></h3>
+      <p>Bouton caméra sur une vitrine ou une capture → ta base de marques répond dans le panneau Apple. Demande l'app native (App Intents).</p></div>
+  </div>
+
+  <div class="verre carte">
+    <h2>Business</h2>
+    <div class="pont"><h3>E-mail d'une marque reçu <span class="vague">vague 2</span></h3>
+      <p>Automatisation E-mail (sans confirmation) sur tes marques en collab → Tokn lance le brief-marque, la page est prête avant que tu ouvres le mail.</p></div>
+    <div class="pont"><h3>Notification Tiime ou Qonto <span class="vague">vague 2</span></h3>
+      <p>iOS 27 : « notification de l'app X contenant “virement” » → Claude classe, rapproche la facture, te dit en une ligne.</p></div>
+    <div class="pont"><h3>Le point sur la mission qui tourne <span class="vague">vague 2</span></h3>
+      <p>« Dis Siri, le point » → une route trouve la mission en cours, demande le point, Siri lit la réponse.</p></div>
+  </div>
+
+  <div class="verre carte">
+    <h2>Perso, corps, journée</h2>
+    <div class="pont"><h3>Alarme arrêtée <span class="vague">vague 2</span></h3>
+      <p>Sans confirmation : le brief audio du matin se lance tout seul dans les AirPods, le mur du jour s'affiche. Il manque une route « brief d'aujourd'hui » (dix lignes).</p></div>
+    <div class="pont"><h3>Chargeur branché après 22 h <span class="vague">vague 1</span></h3>
+      <p>Automatisation Chargeur + heure → Dis-moi avec un texte fixe « qu'est-ce qui reste pour demain ? ». Tu remplaces l'action Dicter par un Texte dans le raccourci, c'est tout.</p></div>
+    <div class="pont"><h3>Repas en photo → Calories <span class="vague">vague 2</span></h3>
+      <p>Le même geste Photo, mais vers l'app Calories (cookie de l'app dans le raccourci). Rattrapage en différé déjà géré côté serveur.</p></div>
+    <div class="pont"><h3>Pas et poids → Calories, sans toi <span class="vague">vague 2</span></h3>
+      <p>Raccourcis lit Santé (pas du jour, dernière pesée) et les pousse à 21 h. L'activité et la courbe de poids se remplissent seules.</p></div>
+    <div class="pont"><h3>Arrivée à l'hôtel (Wi-Fi) <span class="vague">vague 2</span></h3>
+      <p>Le point des missions de la journée, en notification, à la seconde où tu poses ton sac.</p></div>
+    <div class="pont"><h3>Dis-moi lu à voix haute <span class="vague">vague 2</span></h3>
+      <p>Une route qui attend la réponse courte (25 s max) → action « Énoncer le texte ». Claude dans les AirPods en marchant dans Tokyo, mains libres.</p></div>
+    <div class="pont"><h3>Sommeil (coucher) <span class="vague">vague 2</span></h3>
+      <p>Automatisation Sommeil → la file de nuit s'arme avec ce qui attend, tu reçois la liste en une notification.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">La méthode, deux ans d'avance</span>
+  <div class="verre carte">
+    <h2>L'iPhone trie, Claude exécute</h2>
+    <p>Dans deux ans tout le monde dictera à une IA. L'avance, c'est que le message arrive <b>déjà trié et déjà contextualisé</b>, sans que tu aies tapé un mot de plus.</p>
+    <div class="spec"><span class="num">01</span><h3>Le modèle local comme trieur</h3>
+      <p>L'action « Utiliser un modèle » d'iOS 26 tourne sur l'iPhone, gratuite, hors ligne. Elle lit ta dictée et renvoie un petit dictionnaire : espace (Contenu, Marque, Business, Perso), urgence, titre. Le raccourci envoie ensuite à Tokn <b>dans le bon espace</b>. Zéro jeton Claude pour le routage.</p></div>
+    <div class="spec"><span class="num">02</span><h3>Le contexte voyage avec le message</h3>
+      <p>Raccourcis connaît l'heure, le lieu (domicile ou travail en iOS 27), le Focus actif, la batterie, la dernière app, le texte sélectionné. Le raccourci les colle en tête du message : « 23 h 10, hôtel, Focus Sommeil ». Claude répond court et au bon moment, sans que tu l'expliques.</p></div>
+    <div class="spec"><span class="num">03</span><h3>Le stockage partagé des raccourcis</h3>
+      <p>iOS 27 ajoute un stockage global entre raccourcis, synchronisé iCloud : le jeton Tokn y vit une fois, tous les ponts le lisent. Renouveler le jeton = changer une valeur.</p></div>
+    <div class="spec"><span class="num">04</span><h3>Décrire un raccourci au lieu de le construire</h3>
+      <p>iOS 27 crée un raccourci à partir d'une phrase. Avec cette page comme référence, tu peux dire « fais un raccourci qui envoie ma capture à Tokn » et l'iPhone le monte. Les ponts deviennent ta langue, pas ma fabrique.</p></div>
+    <div class="spec"><span class="num">05</span><h3>Trois règles qui ne bougent pas</h3>
+      <ul>
+        <li>Un geste = une intention. Jamais de menu dans un raccourci.</li>
+        <li>Un pont ne paie, ne publie, n'envoie jamais. Il note et lance. Une question de Claude revient en notification, comme aujourd'hui.</li>
+        <li>Tout se défait : un raccourci se supprime, un jeton se renouvelle, un sujet se ferme.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Vague 3 · l'app native</span>
+  <div class="verre carte">
+    <h2>Quand le compte Apple Developer est actif</h2>
+    <p>Les App Intents transforment chaque geste en action système : plus d'adresse ni de jeton, l'iPhone connaît Tokn comme il connaît Messages. Ce qui est à construire dans le projet tokn-ios :</p>
+    <table>
+      <tr><th>Intent</th><th>Ce que ça ouvre</th></tr>
+      <tr><td><b>Lancer un sujet</b> (texte, espace)</td><td>« Dis à Tokn de … », Spotlight Mac avec le texte sélectionné, Bouton Action contextuel</td></tr>
+      <tr><td><b>Dis-moi</b> (question)</td><td>Siri lit la réponse (dialog), encart interactif avec « Continuer »</td></tr>
+      <tr><td><b>Continuer</b> (sujet)</td><td>Les sujets deviennent des entités : Siri et Spotlight les trouvent par leur titre</td></tr>
+      <tr><td><b>Stop · Le point</b> (mission)</td><td>Contrôles du Centre de contrôle, bouton dans la Dynamic Island</td></tr>
+      <tr><td><b>Fini · Je bloque</b> (tâche)</td><td>Widget interactif à boutons, sans ouvrir l'app (fin de Scriptable)</td></tr>
+      <tr><td><b>Chercher une marque</b> (image)</td><td>Visual Intelligence : ta base répond sur une capture ou une vitrine</td></tr>
+      <tr><td><b>Valider un grave</b></td><td>Encart de confirmation Apple, directement depuis la notification</td></tr>
+    </table>
+    <p>Contraintes Apple relevées : la phrase Siri contient le nom de l'app et un seul paramètre ; l'intent tourne sans ouvrir l'app ; les entités ont un identifiant stable (le `sid` de Tokn convient). Chaque intent apparaît aussi dans Raccourcis : la vague 1 se remplace par des actions natives, sans rien réapprendre.</p>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Les limites, franchement</span>
+  <div class="verre carte">
+    <h2>Ce qui peut casser</h2>
+    <div class="spec"><h3>Tailscale</h3><p>Tous les ponts passent par le cerveau en Tailscale. Un seul VPN à la fois sur iOS : Astrill coupe Tailscale. En Chine, il faudra la porte trycloudflare comme pour Calories.</p></div>
+    <div class="spec"><h3>Le jeton dans les raccourcis</h3><p>C'est le jeton de widget, le même que Scriptable, joignable seulement dans le tailnet. S'il fuit : Tokn → renouveler, et je refabrique les sept fichiers en une commande.</p></div>
+    <div class="spec"><h3>Apple Watch et CarPlay sans iPhone</h3><p>La montre seule n'a pas le VPN. Siri au poignet marche quand l'iPhone est à portée, pas en courant sans lui.</p></div>
+    <div class="spec"><h3>Pas de réponse dans le raccourci</h3><p>Raccourcis coupe une requête longue. Claude répond par notification et dans Tokn ; seul « Dis-moi lu » (vague 2) attend une réponse courte.</p></div>
+    <div class="spec"><h3>Rien vu sur le vrai iPhone</h3><p>Le Mac signe, l'iPhone juge. Premier import = test. Si un fichier refuse de s'ouvrir, le nom me suffit pour corriger.</p></div>
+  </div>
+</section>
+
+<section class="jeu">
+  <span class="etiquette">Le jeu · quel pont ?</span>
+  <div class="verre carte">
+    <h2>Cinq moments, touche pour la réponse</h2>
+    <div class="q"><p>Tu vois un reel concurrent à 2 millions de vues dans le métro.</p><p class="r"><b>Capture d'écran.</b> L'automatisation iOS 27 l'envoie à Claude dans Contenu. Rien d'autre.</p></div>
+    <div class="q"><p>Une étiquette inconnue à Shimokitazawa, le vendeur attend.</p><p class="r"><b>Toucher le dos deux fois</b> → Photo à Claude, espace Marque. Réponse en notification avant la caisse.</p></div>
+    <div class="q"><p>Vingt idées qui se bousculent en marchant jusqu'à l'hôtel.</p><p class="r"><b>« Dis Siri, Vocal long. »</b> Tu parles jusqu'au tap. Claude range, tu relis demain.</p></div>
+    <div class="q"><p>Tu vas tourner, tu te figes un peu.</p><p class="r"><b>Le tag NFC du pied caméra</b> → éloquence deux minutes, Hook Gym, Focus Tourner.</p></div>
+    <div class="q"><p>23 h, téléphone branché, tu veux juste savoir ce qui reste.</p><p class="r"><b>Rien à faire.</b> L'automatisation Chargeur pose la question à Claude ; la réponse t'attend sur le widget.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="etiquette">Ensuite</span>
+  <div class="verre carte">
+    <h2>Dans l'ordre</h2>
+    <ol class="etapes">
+      <li>Tu installes Tokn, Lien à Claude, Photo à Claude. Tu les branches (Bouton Action, Toucher le dos, partage). Tu me dis ce qui s'importe mal.</li>
+      <li>Vague 2 : six petites routes serveur (brief du matin, dernier sujet, mission en cours, réponse courte lue, Radar, Calories) et les automatisations qui en dépendent. Une heure de travail, un redémarrage du cerveau quand il est calme.</li>
+      <li>Vague 3 : les App Intents dans le projet tokn-ios dès le Team ID, pour que Siri connaisse Tokn par son nom.</li>
+    </ol>
+    <p>Fabrique : <span class="lien">~/Documents/ponts-raccourcis/fabrique-raccourcis.py</span> · fichiers sur le cerveau : <span class="lien">http://100.125.157.100:8791/ponts/</span></p>
+  </div>
+</section>
+</main>
+<script>
+document.querySelectorAll('.jeu .q').forEach(function(q){q.addEventListener('click',function(){q.classList.toggle('ouvert')})});
+</script>
+</body>
+</html>
